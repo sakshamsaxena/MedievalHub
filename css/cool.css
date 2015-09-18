@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+#rocket
+{
+	position:absolute;
+	top:42%;
+	right:6.2%;
+	float:right;
+	z-index:10;
+	height:75px;
+}
+#earth
+{
+	position:fixed;
+	top:50%;
+	right:5%;
+	z-index:10;
+	height:105px;
+}
+#box{z-index:110;height:60px;width:60px;display:block;margin:0 auto;background-color:#333;}

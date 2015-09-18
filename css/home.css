@@ -1,0 +1,104 @@
+/*******************************************
+Written by Saksham Saxena
+*******************************************/
+
+@charset "utf-8";
+/* CSS Document */
+
+/*Font Loading*/
+@font-face 
+{
+	font-family: 'Papyrus';
+	src: url('../papyrus/papyrus.woff') format('woff'); 
+}
+
+/*Background definition*/
+body
+{
+	background: url(../imgs/background.jpg) center fixed no-repeat;
+}
+
+/*Main Division formatting*/
+#welcome
+{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 0;
+	color:white;
+	width:auto;
+    height: 50%;
+}
+/*Main Text Link Formatting*/
+h1, h3
+{
+	text-align:center;
+	font-family: Papyrus;
+	font-size:5em;
+	font-weight:400;
+	line-height:0.5em;
+	color:white;
+}
+h3{font-size:2em;}
+a
+{
+	text-decoration:none;
+	transition-property:color;
+	transition-duration:0.2s;
+}
+a:link, a:visited, a:active, a:focus{color:#06C; text-decoration:none;}
+a:hover{color:#F03; text-decoration:none;}
+footer a:link,footer a:visited,footer a:active,footer a:focus{color:white;}
+footer a:hover{color:#F03; text-decoration:none;}
+/*Share Icons Positioning*/
+#sharelist
+{
+	position:absolute;
+	right:0;
+	top:0;
+	width:160px;
+	z-index:1;
+}
+
+/*Headings which are in span*/
+#link_list_head
+{
+	position:absolute;
+	top:5px;
+	width:98%;
+	margin:0 auto;
+	font-family: Papyrus;
+	font-size:4em;
+	font-weight:400;
+	color:white;
+	text-align:center;
+}
+footer
+{
+	font-weight:400;
+	font-family:Georgia, serif;
+	font-size:1em;
+	color:white;
+	text-align:center;
+	clear:both;
+} 
+
+/*Responsive Rules*/
+@media all and (max-width:810px)
+{
+    #sharelist,#lister>h3
+    {
+        display: none !important;
+    }
+    #link_list_head
+    {
+        font-size: 3em;
+    }
+    hr
+    {
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<title>Under the hood : M.A.R.K.S. Walkthrough</title>
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/code.css">
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="shortcut icon" href="../imgs/favicon.ico">
+<script type="application/javascript" src="../scripts/jQ.js"></script>
+<script type="text/javascript" src="../scripts/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.queryloader2.min.js"></script>
+<script type="application/javascript" src="../scripts/blog_js.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta itemprop="isFamilyFriendly" content="True">
+<meta itemprop="name" content="Medieval Hub">
+<meta itemprop="description" content="An exclusive walthrough of M.A.R.K.S, an online resource for DTU freshers">
+<meta property="og:type" content="website" />
+<meta property="og:description" content="An exclusive walthrough of M.A.R.K.S, an online resource for DTU freshers" />
+<meta property="og:image" content="http://sakshamsaxena.in/imgs/ess.png">
+<meta property="og:url" content="http://sakshamsaxena.in/blog/marks-wt.htm">
+</head>
+<body>
+<div id="sharelist_b">
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://sakshamsaxena.in/blog/marks-wt.htm" target="_blank" title="Share On Facebook"><img src="../imgs/fb.png" width="80" height="80"></a><a href="https://plus.google.com/share?url=http://sakshamsaxena.in/blog/marks-wt.htm" target="_blank" title="Share on Plus!"><img src="../imgs/plus.png" width="80" height="80"></a>
+</div>
+
+<div id="header" class="toplink"><h1>Medieval Hub</h1></div>
+<div id="blogger" itemscope itemtype="http://schema.org/Blog">
+<section><!--Content goes here-->
+<meta itemprop="description" content="An exclusive walthrough of M.A.R.K.S, an online resource for DTU freshers">
+<header class="blog_title" itemprop="headline">Under the hood : M.A.R.K.S. Walkthrough</header>
+<hr width="650px" align="left" color="#000000">
+Published : <time itemprop="datePublished" datetime="2014-08-17T23:30+05:30">17th August, 2014</time>
+<br>
+Author : <a href="https://plus.google.com/107908505866237517547?rel=author" rel="author">Saksham Saxena</a>
+<br>
+<strong><i>Updated : <time itemprop="dateModified" datetime="2014-09-20T01:00+05:30">20th September, 2014</time></i></strong>
+<br>
+<span itemprop="text">
+<p><span class="first">T</span>he summer break has ended and freshers have started rolling in. It has been a week only but it is a crowd already here in DTU. As expected, they are all pretty excited and apprehensive about First Semester and want to know pretty much everything about the academics beforehand. This gave me a perfect opportunity. The result: <a href="http://dtu.sakshamsaxena.in/">M.A.R.K.S.</a> </p>
+<p>Marks was officially launched on 15 August 2014, and was promoted mostly through Facebook. Exactly one day later, Marks had recorded around 1200 hits, making it an instant hit among the freshers. I also received some direct messages asking about the technical aspects of the website. That is why, this post is dedicated to them, also making me fulfil my <a href="scroll-magic.htm">earlier promise</a> (sadly, I won't be picking up <a href="http://janpaepke.github.io/ScrollMagic/">ScrollMagic</a> right now).</p>
+<p>M.A.R.K.S. is fairly an elementary example of <a href="http://www.greensock.com/gsap-js/">GSAP</a> and jQuery which is wrapped up in minimal amount of JavaScript. For this reason, I will simply be narrating the working of JavaScript which basically controls the animations and on-click gists.</p>
+<strong>The Design</strong>
+<p>The page is broadly divided into two sections. The header and footer are placed on top of them. The lists are hence placed relatively below the top of the section(which is top of the page, not to be confused with bottom of header). The placement of the list is tricky, because if it is too long then it will flow down and behind the footer, thus making some items hidden from view. That is why the six-subject list is quite appropriate. Also, the font size and line height had to be kept in mind, which too can cause enlargement of text resulting in its subsequent overflow. Keeping my audience in mind, I saw that many of them use their smartphones for web browsing very often and that too in portrait mode, which ensures absolute zero chances of content overflow. However, in landscape mode, there is still a good chance of it. You can see this in the screenshots below. </p>
+<img class="content-img" src="../content/portrait.png">
+<figcaption>A screenshot of IE11 on Lumia 520 with resolution of 480x800</figcaption>
+<img class="content-img" src="../content/landscape.png">
+<figcaption>A screenshot of IE11 on Lumia 520 with resolution of 800x480<br>Such an issue is bound to persist</figcaption>
+<strong>The On-Click Gist</strong>
+<p>The code for this feature is available on internet on many a sites, but I found some drawbacks in most of them which were visibly hampering the functionality I was aiming to deliver. As a result, I wrote my own snippet in about 4-5 lines of JavaScript employing jQuery.</p>
+<img class="content-img" src="../content/for_loop.PNG">
+<p>I must admit that this relies on manually defined ids, but an another alternative would be to iterate over sequentially defined div elements using tag name, hence not relying on individual ids (as they are now).<strong><i>The </i>data-*<i> attributes of HTML5 can also be used along with </i><a href="http://api.jquery.com/data/#data-html5">data()</a><i> method of jQuery to serve similar purpose.</i></strong> Both are equally fast in processing as they process on DOM ready, but personally I wanted full control over each element and and hence wrote it the former way. The script simply generates working script on DOM ready, hence taking up only the browser's RAM on client side and not taking any bandwidth or relying on server.  You can see this only in Developer Tools of your browser and not in source code, as that is just raw and unprocessed static code. </p>
+<img class="content-img" src="../content/head.PNG">
+<strong>The Animation</strong>
+<p>This required only a clear visualization of sequence. What followed was a line of code for each tween, as GSAP handles it so smoothly and efficiently. In fact, during the development of this site, I didn't even bother to test it on various browsers and platform because it is already known that GSAP works flawlessly on all of them. If you are familiar with Motion Tweening in Flash, then writing animations would be a piece of cake for you.</p>
+<p>The key thing I would like to emphasise would be the Staggering method which I couldn't explain properly in my previous post. The selector requires an array of elements which would stagger to or from a set of properties defined thus. Often these can be a collection of ids, or a class applied to multiple elements, or, like I used, an element tag like list items, paragraphs, or even entire sections. All this can be animated through various triggers controlled by JavaScript via plugins or custom script as well.</p>
+<strong>The Conclusion</strong>
+<p>Let me wrap this up by concluding that GSAP is just one of the many open source interactive platforms available on the internet for serving many a purposes mostly aimed at resolving potential issues faced by large websites experiencing huge traffic. M.A.R.K.S. is just a humble effort put forward purely for promoting interest in Web Development among the readers. I hope you find this article useful.</p>
+</span>
+</section>
+<br>
+    <footer><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />"Medieval Hub" by Saksham Saxena is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</footer><br><br><br><br>
+</div>
+
+</body>
+</html>

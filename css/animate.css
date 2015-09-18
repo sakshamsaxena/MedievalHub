@@ -1,0 +1,32 @@
+/*Animations are defined here separately*/
+.toplink{
+	-webkit-animation:topone 5s infinite linear;
+	-o-animation:topone 5s infinite linear;
+	-moz-animation:topone 5s infinite linear;
+	-ms-animation:topone 5s infinite linear;
+	color:white;}
+
+@-webkit-keyframes topone
+{
+	0%  {color:hsla(360, 80%, 60%, 0.9);}
+	50% {color:white;}
+	100%{color:hsla(360, 80%, 60%, 0.9);}
+}
+@-o-keyframes topone
+{
+	0%  {color:hsla(360, 80%, 60%, 0.9);}
+	50% {color:white;}
+	100%{color:hsla(360, 80%, 60%, 0.9);}
+}
+@-moz-keyframes topone
+{
+	0%  {color:hsla(360, 80%, 60%, 0.9);}
+	50% {color:white;}
+	100%{color:hsla(360, 80%, 60%, 0.9);}
+}
+@-ms-keyframes topone
+{
+	0%  {color:hsla(360, 80%, 60%, 0.9);}
+	50% {color:white;}
+	100%{color:hsla(360, 80%, 60%, 0.9);}
+}

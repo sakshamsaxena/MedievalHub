@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Font Loading*/
+@font-face 
+{
+	font-family: 'Papyrus';
+	src: url('../papyrus/papyrus.woff') format('woff'); 
+}
+
+/*Background definition*/
+body
+{
+	background: url(../imgs/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+h1, h3
+{
+	text-align:center;
+	font-family: Papyrus;
+	font-size:5em;
+	font-weight:400;
+	line-height:0.5em;
+}
+h3{font-size:2em; margin-top:0.75em;}
+a
+{
+	text-decoration:none;
+	transition-property:color;
+	transition-duration:0.2s;
+}
+a:link, a:visited, a:active, a:focus{color:#06C; text-decoration:none;}
+a:hover{color:#F03; text-decoration:none;}
+/*Share Icons Positioning*/
+
+#controlist
+{
+	position:absolute;
+	left:0;
+	top:0;
+	width:80px;
+	z-index:1;
+}
+/*Headings which are in span*/
+#about_head
+{
+	position:absolute;
+	top:5px;
+	width:98%;
+	margin:0 auto;
+	font-family: Papyrus;
+	font-size:4em;
+	font-weight:400;
+	color:white;
+	text-align:center;
+}
+#about
+{
+	background-image: url(../imgs/blog.jpg);
+	background-position:center;
+	background-repeat: no-repeat;
+	width: 810px;
+	height: 600px;
+	margin: 10% auto 0 auto;
+	overflow:hidden;
+}
+#about section
+{
+	margin:1em 2em;
+	padding:0.5em;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+#about section img
+{
+	float:right;
+	border:1px solid black;
+	border-radius:5px;
+	margin:1em;
+}
+#about section p
+{
+	width:70%;
+}
+blockquote
+{
+	font-style:italic;
+	margin-bottom:1.5em;
+}
+
+/*Responsive Rules*/
+@media all and (max-width:815px)
+{
+    #about_head
+    {
+        font-size: 3em;
+    }
+    #about
+    {
+        background-size: 100% 100%;
+        width: 100%;
+        height: 500px;
+        overflow-y: auto;
+        margin-top: 100px !important;
+    }
+    #about section p
+    {
+        width: 100%;
+        clear: left;
+    }
+    #about section img
+    {
+        width: 50%;
+        display: block;
+        margin: 1em 0em;
+        
+        border-radius: 50%;
+    }
+    blockquote
+    {
+        margin: 1em;
+        margin-bottom: 1.5em !important;
+    }
+    #controlist
+    {
+        display: none !important;
+    }
+    #about::-webkit-scrollbar
+    {
+        display: none !important;
+    }
+}

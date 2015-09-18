@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
+pre, code {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	word-spacing: 0;
+	font-size: 13px;
+	line-height: 16px;
+}
+code {
+	font-family:"Source Code Pro";
+	padding: 0 3px;
+	background-color: #eee; /* support: IE8 */;
+	background-color: rgba( 0, 0, 0, .1 );
+	border-radius: 3px;
+}
+pre code {
+	background-color: transparent;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: pre;
+	word-wrap: normal;
+}

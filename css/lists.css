@@ -1,0 +1,51 @@
+#lister
+{
+	background-image:none;
+	background-repeat: no-repeat;
+	width:65%;
+	min-width: 810px;
+	margin: 10% auto 0 auto;
+	overflow:hidden;
+}
+.textual
+{
+	background-image:url(../imgs/parchment.jpg);
+	background-repeat:no-repeat;
+	height:235px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin:1em 2em;
+	padding:0.5em 1em 0.5em 9em;
+}
+.headings{line-height:1em; font-family:Calibri, "Times New Roman", sans-serif; font-size:28px;}
+.stamp{font-family:Georgia, "Times New Roman", Times, serif; font-size:14px;}
+
+/*Responsive Rules*/
+@media all and (max-width:810px)
+{
+    #sharelist
+    {
+        display: none;
+    }
+    #lister
+    {
+        width: 100%;
+        min-width: 200px;
+        margin: 0;
+        margin-top: 2em;
+    }
+    .textual
+    {
+        background-size: cover;
+        margin: 4em 0.1em;
+        padding-left: 20% !important;
+        height: 150px;
+    }
+    .headings
+    {
+        font-size: 1.5em;
+    }
+    .textual>p
+    {
+        font-size: 1em;
+    }
+}

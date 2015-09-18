@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>jQuery Plugins : When to REALLY use them</title>
+<link rel="stylesheet" href="../css/blog.css">
+<link rel="stylesheet" href="../css/animate.css">
+<link rel="shortcut icon" href="../imgs/favicon.ico">
+<script type="application/javascript" src="../scripts/jQ.js"></script>
+<script type="text/javascript" src="../scripts/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.queryloader2.min.js"></script>
+<script type="application/javascript" src="../scripts/blog_js.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta itemprop="isFamilyFriendly" content="True">
+<meta itemprop="name" content="Medieval Hub">
+<meta itemprop="description" content="How to judge whether you really need to use a jQuery Plugin? Read on">
+<meta property="og:type" content="website" />
+<meta property="og:description" content="How to judge whether you really need to use a jQuery Plugin? Read on" />
+<meta property="og:image" content="http://sakshamsaxena.in/imgs/ess.png">
+<meta property="og:url" content="http://sakshamsaxena.in/blog/jquery-plugin-needs.htm">
+</head>
+<body>
+<div id="sharelist_b">
+<a href="https://www.facebook.com/sharer/sharer.php?u=http://sakshamsaxena.in/blog/jquery-plugin-needs.htm" target="_blank" title="Share On Facebook"><img src="../imgs/fb.png" width="80" height="80"></a><a href="https://plus.google.com/share?url=http://sakshamsaxena.in/blog/jquery-plugin-needs.htm" target="_blank" title="Share on Plus!"><img src="../imgs/plus.png" width="80" height="80"></a>
+</div>
+
+<div id="header" class="toplink"><h1>Medieval Hub</h1></div>
+<div id="blogger" itemscope itemtype="http://schema.org/Blog">
+<section><!--Content goes here-->
+<header class="blog_title" itemprop="headline">jQuery Plugins : When to REALLY use them</header>
+<hr width="650px" align="left" color="#000000">
+Published : <time itemprop="datePublished" datetime="2014-10-28T11:30+05:30">28th October, 2014</time>
+<br>
+Author : <a href="https://plus.google.com/107908505866237517547?rel=author" rel="author">Saksham Saxena</a>
+<br>
+<span itemprop="text">
+<p><span class="first">I</span>t's almost two months since my last post and there is a lot to share. It's a teensy bit daunting to write about innumerable new experiences of mine of everyday, especially after such a long break. Either way, some things need to be said, and I'll say them anyway.</p>
+<p>I find jQuery an indispensable library without which I would feel like I'm in the 90s. Everyone who uses it knows it and I'm sure they feel the same as well. It's only natural in the field of web designing, that when one starts to use jQuery, that person would subsequently end up browsing through its plugins collection to fetch one (or more) which would completely solve our problem effortlessly, whatever that be. That is OK. That is good practice as well. After all, these are made for such situations only, right? Right! But how do you decide if you really NEED a plugin or not? Or, now that the plugins collection is "flourishing", do we even try to assess the quality of low-level functionality plugin which we "intend" to use to make our task easier?</p>
+<p>Ever wondered about those people at Stack Overflow who answer almost all questions with remarkable accuracy? One thing I've often noticed that they hardly refer to another js library or script or any low-level workaround which is available on the Internet, and instead write their own snippet then and there. I'm pretty sure JSFiddle receives maximum traffic from Stack Overflow pages. Also, if you read through a blog of any good/well-known contributor to open-source libraries, you will find them approaching to a problem in an independent way and working towards it from a different angle, the one which is convenient and respects the constraints as well. Even the official jQuery plugin guide specifically mentions that there are a huge number of scenarios where the plugin would simply fail to deliver, and that's why its purpose should be specifically defined while keeping a general type of problem and the audience who would be dealing with that problem in prime focus. The contributor thus can add relevant configuration options to that plugin for its customisation. This isn't a mountainous task. Really, it's not.</p>
+<p>Sadly, what I've found in some cases is that people are often overwhelmed by the huge collection of jQuery plugins available on the Internet (or maybe they're just utterly lazy), and they tend to manipulate their problem so that it fits the area of function of some plugin and later use that plugin. That is just plain stupid. Also, there is no shortage of "cheap" plugins on the Internet and so it disturbs the standard which is required in the community.</p>
+<p>The ideal is a simple balance : the creator aims to serve the community with no intention of providing with bad quality products, the consumer aims to solve the problem at hand which can be made easier, in parts or whole, by the use of such products. The present scenario is somewhat different. The creator is a desperate person who thinks contributing alone is a cool thing, and often forgets the standards and is misled by notions of glory. The consumer wants to get rid of the problem in any bloody way, even if it means botching up the problem itself and coming up with an god-awful result. I may be exaggerating here a little but I'm sure neither earns the good and proud feeling at the end of it.</p>
+<p>Now one may simply ask here, "Why does all this happen? Does this mean half of us are douchbags or what?". Well of course not. These pictures I painted above are a mere result of something similar I myself was going through, and thankfully I saw the impending anarchy and somehow took a turn in time . And that's the answer. Time. That's the one thing which restricts the most of us and screws the best of us. Shortage of time is basically what make people resort to quick workarounds which are often not so reliable. Same implies to the creator. He/she is under the pump and ends up publishing "something" in the end, just like that. It's like Hell's Kitchen at times. Yeah we can report issues on github etc. but it will be known soon that the concept itself is flawed, so there is no purpose of fiddling with the code.</p>
+<p>Just to be clear, if I'm not yet, that I'm not completely discouraging the use of plugins here, rather stressing on the scenarios when we feel the need to use them arises and somehow get misled along the way.</p>
+<p>Okay now let me put my frustration aside and begin blabbering design. As I am fan of web animations, I ended up getting hands on experience with Scrollorama and, finally, Scroll Magic, in recent projects. The former, being ages old, was pretty basic and required a really good level of creativity to use it for creating an uber cool page. Funnily enough, the folks at IEEE DTU did exactly that and based their annual technical event Troika's website on it.</p>
+<p>Scrolling animations are a good exploitation of jQuery. Manipulating DOM is one of the most interesting things to do with js, and keeping control of the scroll is even more interesting. For example, in Scroll Magic, not only it easily handles whatever Tween Max throws at it, the parallax scrolling and sections are made extremely easy to implement. It's recent version can even draw SVGs and tween along a bezier path. Although these features are not so common, that is exactly what makes Scroll Magic a future proof jQuery plugin. This is the level of plugin which one should aim to create. If you have ever heard Sunil Gavaskar's advice for batsmen that they should all play to as if they have to get a century, then my statement would serve a similar analogy in web designing. Since my project involving Scroll Magic is still in progress, there is good chance that I will update its walk-through in my next post. There are a lot many good things in it, sweetly and cleverly wrapped in OOP.</p>
+<p>Meanwhile, I have had the pleasure of company of some people who are genuinely interested in contributing to the community keeping a really high standard. Such people are bloody inspiring, I must say. Modest and down-to-earth, that's how I would describe them. They simply love learning and spreading their knowledge. Hats off to them. It's hard to find such amazing seniors who are willing to help you out whatever time it may be. I'm quite lucky to have such inspiring figures around.</p>
+<p>Alas, I need to get back to my work AFK. I'll wrap this mess up by simply saying that one must do justice to his/her own work by dedicating to it with complete focus and honesty. What would follow is an outcome of which you'll be proud of. A simple thought can turn into a great idea when worked upon, but worked upon nonetheless.</p>
+</span>
+</section>
+<br>
+    <footer><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />"Medieval Hub" by Saksham Saxena is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</footer><br><br><br><br>
+</div>
+
+</body>
+</html>
